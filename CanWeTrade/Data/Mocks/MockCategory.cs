@@ -13,9 +13,9 @@ namespace CanWeTrade.Data.Mocks
             get {
                 return new List<Category> {
                     new Category {categoryName="Электромобили", desc="Современный вид транспорта"},
-
                     new Category {categoryName="Электромобили", desc="Современный вид транспорта"},
                     new Category {categoryName="Классические автомобили", desc="Машина с двигателем внутреннего сгорания"}
+
                     };
             }
         }
