@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using CanWeTrade.ViewModels;
 
 namespace CanWeTrade.Controllers
 {
@@ -20,9 +21,11 @@ namespace CanWeTrade.Controllers
 
         public ViewResult List()
         {
-            ViewBag.Category = "Some new";
-            var cars = _allCars.Cars;
-            return View(cars);
+            ViewBag.Title = "Страница с автомобилями";
+            CarsListViewModel obj = new CarsListViewModel();
+            obj.allCars = _allCars.Cars;
+            obj.currCategory = "Автомобили";
+            return View(obj);
         }
 
     }
