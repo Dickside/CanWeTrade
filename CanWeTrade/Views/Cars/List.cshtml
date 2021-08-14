@@ -13,12 +13,13 @@
     <title>List</title>
 </head>
 <body>
-    <h2>Все автомобили</h2>
+    <h1>Все автомобили</h1>
+    <h3>@ViewBag.Category</h3>
     @{
         foreach (var car in Model)
         {
             <div>
-                <p>Модель: @car.name </p>
+                <h3>Модель: @car.name </h3>
                 <p>Цена: @car.price.ToString("c")</p>
             </div>
         }
